@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="1400.0" onScroll="#zoom_in_out" prefHeight="700.0" prefWidth="1380.0" styleClass="mainFxmlClass" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Red.dashboard.DashboardController">
+   <children>
+      <VBox alignment="CENTER" maxWidth="920.0" prefHeight="706.0" prefWidth="1380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" maxHeight="150.0" prefHeight="100.0" prefWidth="920.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="201.0" prefWidth="460.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="301.0">
+                           <children>
+                              <VBox alignment="CENTER" minWidth="100.0" prefHeight="145.0" prefWidth="100.0" style="-fx-background-color: #EEE;">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/icons8-user-40.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <BorderPane prefHeight="145.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                                 <center>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="154.0" spacing="10.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="291.0" text="Total Users" textFill="#aba6a6">
+                                             <font>
+                                                <Font name="Calibri Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label prefHeight="36.0" prefWidth="290.0" text="258" textFill="#5cbbf2">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </center>
+                                 <bottom>
+                                    <JFXButton alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="208.0" text="Create New -&gt;" BorderPane.alignment="CENTER">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="201.0" prefWidth="460.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="300.0">
+                           <children>
+                              <VBox alignment="CENTER" minWidth="100.0" prefHeight="145.0" prefWidth="100.0" style="-fx-background-color: #EEE;">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/icons8-car-40.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <BorderPane prefHeight="145.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                                 <center>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="154.0" spacing="10.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="291.0" text="Total Drivers" textFill="#aba6a6">
+                                             <font>
+                                                <Font name="Calibri Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label prefHeight="36.0" prefWidth="290.0" text="258" textFill="#5cbbf2">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </center>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <bottom>
+                                    <JFXButton alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="210.0" text="Create New -&gt;" BorderPane.alignment="CENTER">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="201.0" prefWidth="460.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="300.0">
+                           <children>
+                              <VBox alignment="CENTER" minWidth="100.0" prefHeight="145.0" prefWidth="100.0" style="-fx-background-color: #EEE;">
+                                 <children>
+                                    <ImageView fitHeight="69.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/icons8-user-40.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <BorderPane prefHeight="145.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                                 <center>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="154.0" spacing="10.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="291.0" text="New Users" textFill="#aba6a6">
+                                             <font>
+                                                <Font name="Calibri Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label prefHeight="36.0" prefWidth="290.0" text="258" textFill="#5cbbf2">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </center>
+                                 <bottom>
+                                    <Label prefHeight="45.0" prefWidth="106.0" textFill="#8a8888" BorderPane.alignment="BOTTOM_RIGHT">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </Label>
+                                 </bottom>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </BorderPane>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" maxHeight="300.0" minHeight="397.0" prefHeight="589.0" prefWidth="920.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="45.0" prefHeight="45.0" prefWidth="920.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label text="Graphical Report" textFill="#616060">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <StackPane maxHeight="300.0" prefHeight="300.0" prefWidth="920.0" style="-fx-background-color: #fff;">
+                           <children>
+                              <BarChart fx:id="Barchart" maxHeight="300.0" minHeight="300.0" prefHeight="300.0">
+                                 <xAxis>
+                                    <CategoryAxis fx:id="barx" opacity="0.0" prefHeight="13.0" prefWidth="1023.0" side="BOTTOM" tickLabelFill="#d1181700" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="bary" label="distance" minorTickCount="2" side="LEFT" upperBound="1000.0" />
+                                 </yAxis>
+                              </BarChart>
+                              <LineChart fx:id="Linechart" maxHeight="300.0" minHeight="300.0" prefHeight="300.0">
+                                 <xAxis>
+                                    <CategoryAxis prefHeight="13.0" prefWidth="1023.0" side="BOTTOM" fx:id="x" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="y" label="distance" opacity="0.0" side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <LineChart fx:id="Linechart2" maxHeight="300.0" minHeight="300.0" onMousePressed="#origin_Size" onScroll="#zoom_in_out" prefHeight="300.0" prefWidth="920.0">
+                                 <xAxis>
+                                    <CategoryAxis fx:id="linex" opacity="0.0" prefHeight="13.0" prefWidth="1023.0" side="BOTTOM" tickLabelFill="#ffffff00" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="y1" label="distance" opacity="0.0" side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefWidth="260.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="45.0" maxWidth="270.0" minHeight="45.0" minWidth="300.0" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label text="New Drivers" textFill="#616060">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <GridPane maxHeight="402.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="110.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="282.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="94.0" prefWidth="160.0" style="-fx-background-color: #DDDDDD;">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/man.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #e8e8e8;" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="John Watson" textFill="#aba6a6">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="17.0" prefWidth="152.0" text="9876543210" textFill="#aba6a6" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #EEEEEE;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="John Watson" textFill="#aba6a6">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="17.0" prefWidth="152.0" text="9876543210" textFill="#aba6a6" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="John Watson" textFill="#aba6a6">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="17.0" prefWidth="152.0" text="9876543210" textFill="#aba6a6" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #EEEEEE;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label text="John Watson" textFill="#aba6a6">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="17.0" prefWidth="152.0" text="9876543210" textFill="#aba6a6" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="94.0" prefWidth="160.0" style="-fx-background-color: #EEEEEE;" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/man.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="94.0" prefWidth="160.0" style="-fx-background-color: #DDDDDD;" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/man.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="94.0" prefWidth="160.0" style="-fx-background-color: #EEEEEE;" GridPane.rowIndex="3">
+                                 <children>
+                                    <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/man.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="100.0" left="10.0" right="50.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,30 @@
+#add_tab{
+    -fx-border-width: 0 0 3 0; -fx-border-color: transparent transparent #e00f0f transparent;
+}
+
+.color-picker .arrow, .color-picker .arrow-button{
+    -fx-background-color: transparent;
+}
+
+#comment_Add *.text  , #comment_Edit *.text { -fx-text-alignment: RIGHT; }
+
+
+.table-view .column-header-background{
+     -fx-background-color: transparent;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #797676;
+    -fx-font-weight: bold;
+}
+
+
+#start_Add, #end_Add , #start_Edit , #end_Edit {
+ 
+    -fx-padding: 0 0 0 10;
+}

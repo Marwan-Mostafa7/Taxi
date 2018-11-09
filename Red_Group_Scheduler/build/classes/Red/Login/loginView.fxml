@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="676.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Red.Login.LoginViewController">
+   <left>
+      <StackPane fx:id="stack_of_circle" prefHeight="465.0" prefWidth="395.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="stack_of_circle" prefHeight="400.0" prefWidth="253.0">
+               <children>
+                  <StackPane layoutX="-192.0" layoutY="-19.0" style="-fx-background-radius: 0;">
+                     <children>
+                        <Circle fx:id="cir1" blendMode="SRC_ATOP" depthTest="ENABLE" fill="#992020ea" radius="250.0" stroke="#ff2121b0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <ImageView blendMode="OVERLAY" fitHeight="526.0" fitWidth="640.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../imgs/bus.jpg" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane prefHeight="482.0" prefWidth="565.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="223.0" layoutY="206.0" prefHeight="103.0" prefWidth="200.0" text="RED GROUP" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="223.0" layoutY="260.0" prefHeight="103.0" prefWidth="200.0" text="SCHEDULER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="101.0" fitWidth="111.0" layoutX="273.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imgs/icons8-bus-filled-50.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#mimize_stage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imgs/icons8-subtract-50.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#close_window" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imgs/icons8-delete-50.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="49.0" prefHeight="59.0" prefWidth="126.0" text="Login" textAlignment="CENTER" textFill="#9d9c9c">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="116.0" prefHeight="59.0" prefWidth="126.0" text="User Name" textAlignment="CENTER" textFill="#9d9c9c">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="username" focusColor="#405aa800" layoutX="20.0" layoutY="166.0" prefHeight="31.0" prefWidth="232.0" promptText="     " style="-fx-border-color: #ccbfbf; -fx-border-radius: 5;" styleClass="textfield" stylesheets="@loginC.css" unFocusColor="#ffffff00">
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </JFXTextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="205.0" prefHeight="59.0" prefWidth="126.0" text="Password" textAlignment="CENTER" textFill="#9d9c9c">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="password" focusColor="#405aa800" layoutX="20.0" layoutY="258.0" prefHeight="31.0" prefWidth="232.0" promptText="     " style="-fx-border-color: #ccbfbf; -fx-border-radius: 5;" styleClass="textfield" stylesheets="@loginC.css" unFocusColor="#ffffff00" />
+            <JFXButton layoutX="20.0" layoutY="323.0" onAction="#Logged_in" prefHeight="39.0" prefWidth="226.0" style="-fx-background-color: #db0d0d; -fx-background-radius: 5;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="28.0" fitWidth="30.0" layoutX="23.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imgs/icons8-administrator-male-50%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="29.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imgs/icons8-key-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

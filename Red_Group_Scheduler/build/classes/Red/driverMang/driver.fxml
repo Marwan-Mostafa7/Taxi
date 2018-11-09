@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxWidth="1400.0" prefWidth="1380.0" stylesheets="@driver.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Red.driverMang.DriverController">
+   <children>
+      <HBox maxWidth="1380.0" prefHeight="618.0" prefWidth="920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="border_All" maxWidth="1380.0" prefWidth="1380.0">
+               <left>
+                  <VBox fx:id="left_vbox" maxWidth="460.0" prefHeight="600.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="328.0" style="-fx-background-color: #FFF;">
+                           <children>
+                              <Label prefWidth="71.0" text="Driver List" textFill="#797676">
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView prefHeight="560.0" prefWidth="302.0" stylesheets="@driver.css">
+                           <columns>
+                              <TableColumn prefWidth="75.0" style="-fx-text-fill: #aaaaaa;" text="Driver No." />
+                              <TableColumn prefWidth="75.0" style="-fx-text-fill: #aaaaaa;" styleClass="driver" text="First Name" />
+                              <TableColumn prefWidth="75.0" style="-fx-text-fill: ;" text="Last Name" />
+                              <TableColumn prefWidth="60.0" style="-fx-text-fill: ;" text="Actions" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </VBox>
+               </left>
+               <center>
+                  <VBox maxWidth="1380.0" prefHeight="600.0" prefWidth="1380.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane maxWidth="1380.0" prefHeight="593.0" prefWidth="1380.0">
+                           <center>
+                              <AnchorPane maxWidth="1380.0" prefWidth="1380.0" BorderPane.alignment="CENTER_RIGHT">
+                                 <BorderPane.margin>
+                                    <Insets top="10.0" />
+                                 </BorderPane.margin>
+                                 <children>
+                                    <VBox maxWidth="1380.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="543.0" prefWidth="1380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <BorderPane minHeight="40.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="44.0" prefWidth="790.0" style="-fx-background-color: #FFFFFF;">
+                                             <left>
+                                                <Label alignment="CENTER" contentDisplay="TEXT_ONLY" nodeOrientation="RIGHT_TO_LEFT" prefHeight="32.0" prefWidth="145.0" text="Add Driver" textFill="#4d4b4b" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </left>
+                                             <right>
+                                                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="230.0" spacing="20.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <StackPane>
+                                                         <children>
+                                                            <Label fx:id="add_tab" alignment="CENTER" contentDisplay="TEXT_ONLY" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="115.0" text="Add" textFill="#e00f0f">
+                                                               <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                               </font>
+                                                               <cursor>
+                                                                  <Cursor fx:constant="DEFAULT" />
+                                                               </cursor>
+                                                            </Label>
+                                                            <JFXButton fx:id="add_btn" onAction="#add_clicked" opacity="0.0" prefHeight="40.0" prefWidth="150.0">
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane>
+                                                         <children>
+                                                            <Label fx:id="edit_tab" alignment="CENTER" contentDisplay="TEXT_ONLY" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="115.0" text="Edit" textFill="#797676">
+                                                               <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                               </font>
+                                                               <cursor>
+                                                                  <Cursor fx:constant="DEFAULT" />
+                                                               </cursor>
+                                                            </Label>
+                                                            <JFXButton fx:id="edit_btn" onAction="#edit_clicked" opacity="0.0" prefHeight="40.0" prefWidth="150.0">
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </HBox>
+                                             </right>
+                                          </BorderPane>
+                                          <Separator prefWidth="200.0" />
+                                          <HBox fx:id="hbox_of_img" nodeOrientation="LEFT_TO_RIGHT" spacing="80.0" style="-fx-background-color: #FFFFFF;">
+                                             <children>
+                                                <ImageView fx:id="img_driver" fitHeight="109.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" top="40.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@../../imgs/man.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <GridPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="512.0" prefWidth="312.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.33331298828125" minWidth="10.0" prefWidth="211.3333740234375" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="100.6666259765625" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Driver No." textFill="#797676" GridPane.columnIndex="1" />
+                                                      <JFXTextField fx:id="d_no_Add" alignment="CENTER_RIGHT" focusColor="#ffffff00" prefHeight="35.0" prefWidth="168.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="First Name" textFill="#797676" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Last Name" textFill="#797676" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Phone No." textFill="#797676" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Driver Color" textFill="#797676" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Comments" textFill="#797676" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Availability" textFill="#797676" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <JFXTextField fx:id="f_name_Add" alignment="CENTER_RIGHT" focusColor="#ffffff00" prefHeight="35.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.rowIndex="1" />
+                                                      <JFXTextField fx:id="l_name_Add" alignment="CENTER_RIGHT" focusColor="#ffffff00" prefHeight="35.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.rowIndex="2" />
+                                                      <JFXTextField fx:id="p_no_Add" alignment="CENTER_RIGHT" focusColor="#ffffff00" prefHeight="35.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.rowIndex="3" />
+                                                      <ColorPicker fx:id="color_Add" prefHeight="97.0" prefWidth="225.0" style="-fx-background-color: #FFFFFF; -fx-color-label-visible: false;" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                                                         <padding>
+                                                            <Insets left="170.0" />
+                                                         </padding>
+                                                      </ColorPicker>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="226.0" text="Drivers working weeks (x) = Available" textFill="#797676" GridPane.rowIndex="6" />
+                                                      <JFXTextArea fx:id="comment_Add" focusColor="#405aa800" labelFloat="true" maxHeight="79.0" maxWidth="270.0" prefHeight="77.0" prefWidth="270.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7; -fx-text-alignment: center;" styleClass="text" unFocusColor="#4d4d4d00" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </JFXTextArea>
+                                                      <VBox GridPane.rowIndex="7">
+                                                         <children>
+                                                            <HBox nodeOrientation="LEFT_TO_RIGHT">
+                                                               <children>
+                                                                  <JFXCheckBox fx:id="BH_Add" alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                                  <JFXCheckBox alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                                  <JFXCheckBox alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                                  <JFXCheckBox alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                                  <JFXCheckBox alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                                  <JFXCheckBox alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                                  <JFXCheckBox alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                                  <JFXCheckBox alignment="CENTER_RIGHT" checkedColor="#599bd6" prefHeight="20.0" prefWidth="5.0" text=" " />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox prefHeight="25.0" prefWidth="312.0" spacing="17.0">
+                                                               <children>
+                                                                  <Label text="Sat" />
+                                                                  <Label text="Fri" />
+                                                                  <Label text="Thurs" />
+                                                                  <Label text="Wed" />
+                                                                  <Label text="Tues" />
+                                                                  <Label text="Mon" />
+                                                                  <Label text="Sun" />
+                                                                  <Label text="BH" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </GridPane>
+                                                <Separator maxHeight="420.0" orientation="VERTICAL" prefHeight="420.0" prefWidth="6.0">
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" top="20.0" />
+                                                   </HBox.margin>
+                                                </Separator>
+                                                <VBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="502.0" prefWidth="326.0" spacing="20.0">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" top="10.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <Label prefHeight="37.0" prefWidth="193.0" text="Driver Route Knowledge" textFill="#686666">
+                                                         <font>
+                                                            <Font name="Calibri Bold" size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="197.0" prefWidth="232.0">
+                                                         <children>
+                                                            <ListView fx:id="list_1_Add" />
+                                                            <VBox alignment="CENTER" prefHeight="197.0" prefWidth="39.0" spacing="10.0">
+                                                               <children>
+                                                                  <JFXButton fx:id="forward_Add" text="&gt;" textFill="#797676" textOverrun="CLIP">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="16.0" />
+                                                                     </font>
+                                                                  </JFXButton>
+                                                                  <JFXButton fx:id="backward_Add" text="&lt;" textFill="#797676" textOverrun="CLIP">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="16.0" />
+                                                                     </font>
+                                                                  </JFXButton>
+                                                               </children>
+                                                            </VBox>
+                                                            <ListView fx:id="list_2_Add" />
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="125.0" prefWidth="326.0" spacing="10.0" style="-fx-background-color: #EEEEEE;">
+                                                         <children>
+                                                            <Label text="Holidays" textFill="#686666">
+                                                               <font>
+                                                                  <Font name="Calibri Bold Italic" size="19.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                                                               <children>
+                                                                  <JFXTextField fx:id="start_Add" focusColor="#ffffff00" prefHeight="30.0" promptText="Start Date" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10;" unFocusColor="#ffffff00">
+                                                                     <HBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                     </HBox.margin>
+                                                                  </JFXTextField>
+                                                                  <JFXTextField fx:id="end_Add" focusColor="#ffffff00" prefHeight="30.0" promptText="Return Date" style="-fx-background-color: #DDDDDD; -fx-background-radius: 10;" unFocusColor="#ffffff00">
+                                                                     <padding>
+                                                                        <Insets right="50.0" />
+                                                                     </padding>
+                                                                  </JFXTextField>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets top="20.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <Separator prefWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <bottom>
+                              <HBox alignment="CENTER_RIGHT" maxWidth="1380.0" prefHeight="50.0" prefWidth="1380.0" spacing="30.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton prefHeight="40.0" prefWidth="90.0" style="-fx-background-radius: 10; -fx-background-color: #DDDDDD;" text="Cancel" />
+                                    <JFXButton prefHeight="40.0" prefWidth="90.0" style="-fx-background-radius: 10; -fx-background-color: #599bd6;" text="Save" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </HBox>
+                           </bottom>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </BorderPane>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

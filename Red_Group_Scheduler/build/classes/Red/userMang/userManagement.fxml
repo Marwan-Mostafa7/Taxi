@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane maxHeight="500.0" maxWidth="1000.0" prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <center>
+            <VBox style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Add  New User" textFill="#515151">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" maxHeight="260.0" maxWidth="600.0" prefHeight="150.0" prefWidth="600.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="100.0" left="40.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../imgs/man.jpg" />
+                           </image>
+                        </ImageView>
+                        <GridPane prefHeight="353.0" prefWidth="310.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.66668701171875" minWidth="10.0" prefWidth="119.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.33331298828125" minWidth="10.0" prefWidth="191.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="First Name" textFill="#797676" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Last Name" textFill="#797676" GridPane.rowIndex="1" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="User Name" textFill="#797676" GridPane.rowIndex="2" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Role" textFill="#797676" GridPane.rowIndex="3" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="168.0" text="Password" textFill="#797676" GridPane.rowIndex="4" />
+                              <JFXTextField fx:id="first_name" focusColor="#ffffff00" prefHeight="35.0" prefWidth="168.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.columnIndex="1" />
+                              <JFXTextField fx:id="last_name" focusColor="#ffffff00" prefHeight="35.0" prefWidth="168.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="user_name" focusColor="#ffffff00" prefHeight="35.0" prefWidth="168.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <JFXTextField fx:id="role" focusColor="#ffffff00" prefHeight="35.0" prefWidth="168.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <JFXPasswordField fx:id="pass" focusColor="#ffffff00" prefHeight="35.0" prefWidth="168.0" style="-fx-border-color: #aaaaaa; -fx-border-radius: 7;" unFocusColor="#ffffff00" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <Separator maxHeight="300.0" orientation="VERTICAL" prefHeight="300.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Separator>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Separator />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="800.0" spacing="30.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <JFXButton fx:id="cancel_btn" prefHeight="40.0" prefWidth="90.0" style="-fx-background-radius: 10; -fx-background-color: #DDDDDD;" text="Cancel" textFill="#575353">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="save_btn" prefHeight="40.0" prefWidth="90.0" style="-fx-background-radius: 10; -fx-background-color: #599bd6;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </bottom>
+         <right>
+            <VBox alignment="TOP_CENTER" prefHeight="353.0" prefWidth="264.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Access Rights" textFill="#515151">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <GridPane prefHeight="125.0" prefWidth="167.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label text="View" textFill="#797676">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Edit" textFill="#797676">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <JFXCheckBox fx:id="rota_view" alignment="CENTER_RIGHT" checkedColor="#e00f0f" prefHeight="20.0" prefWidth="5.0" text=" " />
+                              <JFXCheckBox fx:id="rota_edit" alignment="CENTER_RIGHT" checkedColor="#e00f0f" prefHeight="20.0" prefWidth="5.0" text=" " />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label contentDisplay="RIGHT" prefHeight="51.0" prefWidth="187.0" text="Rota" textFill="#797676" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="RIGHT" prefHeight="51.0" prefWidth="187.0" text="Pay Hours" textFill="#797676" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <JFXCheckBox fx:id="pay_view" alignment="CENTER_RIGHT" checkedColor="#e00f0f" prefHeight="20.0" prefWidth="5.0" text=" " />
+                              <JFXCheckBox fx:id="pay_edit" alignment="CENTER_RIGHT" checkedColor="#e00f0f" prefHeight="20.0" prefWidth="5.0" text=" " />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

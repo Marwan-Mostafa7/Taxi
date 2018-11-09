@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #DDD;" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Red.menu.MenuController">
+   <top>
+      <VBox prefHeight="72.0" prefWidth="1676.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="1620.0" style="-fx-background-color: #e00f0f;">
+               <children>
+                  <BorderPane prefHeight="88.0" prefWidth="1714.0">
+                     <left>
+                        <HBox prefHeight="92.0" prefWidth="364.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imgs/icons8-bus-filled-50.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="92.0" prefWidth="248.0">
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="242.0" text="RED GROUP" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="30.0" prefWidth="237.0" text="SCHEDULER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                           <BorderPane.margin>
+                              <Insets top="15.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </left>
+                     <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="434.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="99.0" prefWidth="106.0">
+                                 <children>
+                                    <Label layoutX="-15.0" layoutY="13.0" prefHeight="75.0" prefWidth="103.0" text="John Doe" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <ImageView fitHeight="35.0" fitWidth="30.0" layoutY="1.0" onMouseClicked="#log_Out" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../imgs/icons8-shutdown-50.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <HBox alignment="CENTER" prefHeight="88.0" prefWidth="113.0" spacing="25.0" style="-fx-background-color: #c40505;">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="25.0" onMouseClicked="#mimize_stage" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/icons8-subtract-50%20(1).png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fitHeight="35.0" fitWidth="25.0" onMouseClicked="#close_window" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../imgs/icons8-delete-50%20(1).png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </HBox>
+                     </right>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="9.0" prefWidth="1676.0" spacing="20.0" style="-fx-background-color: #FFF;">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imgs/icons8-clock.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="The_Date" text="09-Nov-2018" textFill="#e00f0f">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="The_Time" text="01:28 PM" textFill="#e00f0f">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane prefHeight="681.0" prefWidth="1400.0" />
+         </center>
+      </BorderPane>
+   </center>
+   <left>
+      <VBox prefWidth="276.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="dash" alignment="TOP_LEFT" graphicTextGap="0.0" onAction="#show_dashboard" prefHeight="60.0" prefWidth="276.0" text="DashBoard" textFill="#969494">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fx:id="house" fill="#969494" glyphName="HOME" size="26" wrappingWidth="53.38839340209961" />
+               </graphic>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="userM" alignment="TOP_LEFT" graphicTextGap="0.0" onAction="#showUserMang" prefHeight="60.0" prefWidth="276.0" text="User Management" textFill="#969494">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="human" fill="#969494" glyphName="USER" size="26" wrappingWidth="53.38839340209961" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="driverM" alignment="TOP_LEFT" graphicTextGap="0.0" onAction="#show_driver_mang" prefHeight="60.0" prefWidth="276.0" text="Driver Management" textFill="#969494">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="car" fill="#969494" glyphName="CAR" size="26" text="" wrappingWidth="53.38839340209961" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="schedM" alignment="TOP_LEFT" graphicTextGap="0.0" onAction="#show_shedule_mang" prefHeight="60.0" prefWidth="276.0" text="Schedule Management" textFill="#969494">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="sched" fill="#969494" glyphName="CALENDAR" size="26" wrappingWidth="53.38839340209961" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="roro" alignment="TOP_LEFT" graphicTextGap="0.0" onAction="#show_Rota" prefHeight="60.0" prefWidth="276.0" text="Rota" textFill="#969494">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="location" fill="#969494" glyphName="MAP_MARKER" size="26" wrappingWidth="53.38839340209961" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="payH" alignment="TOP_LEFT" graphicTextGap="0.0" onAction="#show_pay_hours" prefHeight="60.0" prefWidth="276.0" text="Pay hours" textFill="#969494">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="clock" fill="#969494" glyphName="CLOCK_ALT" size="26" wrappingWidth="53.38839340209961" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="sett" alignment="TOP_LEFT" graphicTextGap="0.0" onAction="#show_settings" prefHeight="60.0" prefWidth="276.0" text="Settings" textFill="#969494">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="setti" fill="#969494" glyphName="COG" size="26" wrappingWidth="53.38839340209961" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
