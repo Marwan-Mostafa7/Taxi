@@ -23,4 +23,4 @@ Taxi Management System
 
 ## Login Form
 
-![alt text](./screen-shots/login_form.png)
+![alt text](./screen-shots/login_form.PNG)
