@@ -1,6 +1,9 @@
 # Taxi
 Taxi Management System
 
+JavaFX Desktop Application with variaties of libraries (JFoenix, FontAwesome, etc)
+
+
 ## DashBoard View
 
 ![alt text](./screen-shots/Dash_board.png)
